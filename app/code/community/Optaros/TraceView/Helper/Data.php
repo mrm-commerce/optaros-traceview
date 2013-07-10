@@ -39,6 +39,11 @@ class Optaros_TraceView_Helper_Data
 		'system_config' => 'mage_init'
 	);
 
+
+	protected static function _getTimerPattern($timer) {
+		return substr($timer , strrpos($timer, '::') + 2);
+	}
+
 	/**
 	 * get the proper layer to log the timer into
 	 *
@@ -54,11 +59,27 @@ class Optaros_TraceView_Helper_Data
 				self::_getConfigNode(self::XML_PATH_CONFIG_LAYERS, TRUE);
 		}
 
-		$pkey = substr($timerName , strrpos($timerName, '::') + 2);
+		$pkey = self::_getTimerPattern($timerName);
 		if (!empty(self::$_layers) && isset(self::$_layers[$pkey])) {
 			/* layer found in config */
 			return self::$_layers[$pkey];
 		}
+
+		return NULL;
+
+	}
+
+	/**
+	 * check to see if we have a layer that we're always logging
+	 *
+	 * @param String $timerName timer name
+	 *
+	 * @return Layer name on success
+	 * @return NULL if no configured layer was found
+	 */
+	public static function getStaticTimerLayer($timerName) {
+
+		$pkey = self::_getTimerPattern($timerName);
 
 		/* check the static mapping */
 		if (isset(self::$_staticLayers[$pkey]))
@@ -68,6 +89,8 @@ class Optaros_TraceView_Helper_Data
 
 	}
 
+
+
 	/**
 	 * add layer in TraceLytics
 	 *
@@ -76,9 +99,12 @@ class Optaros_TraceView_Helper_Data
 	 */
 	public static function addLayer($timerName, $label) {
 
-		if (self::isEnabled()) {
+		$layer = self::getStaticTimerLayer($timerName);
 
-			$layer = self::getTimerLayer($timerName);
+		if ($layer !== NULL || self::isEnabled()) {
+
+			if (empty($layer))
+				$layer = self::getTimerLayer($timerName);
 
 			if (!empty($layer)) {
 				oboe_log($layer, $label, array( "timer" => $timerName));
@@ -100,12 +126,11 @@ class Optaros_TraceView_Helper_Data
 
 			$cfg = self::_getConfigNode(self::XML_PATH_CONFIG_ENABLED);
 			if ($cfg === NULL) {
-				/* Config is not loaded at this point, simply return 
-				 * based on whether the oboe extension is loaded or not
+				/* Config is not loaded at this point, simply return FALSE 
 				 * but DON'T cache the result, leave it NULL
-				 * instead to recompute it once the config is loaded.
+				 * instead, to recompute it once the config is loaded.
 				 */
-				return (extension_loaded('oboe') && function_exists('oboe_log'));
+				return FALSE;
 			}
 
 			self::$_enabled = 

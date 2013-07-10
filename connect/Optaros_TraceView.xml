@@ -1,0 +1,108 @@
+<_>
+   <form_key>vB3R76ySMwjIcaxn</form_key>
+   <name>Optaros_TraceView</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+   </version_ids>
+   <summary>TraceView profiling through Varien_Profiler</summary>
+   <description>The module enables profiling with AppNeta TraceView through calls to the Varien_Profiler API.
+
+Varien_Profiler::start() and stop() methods will
+send info to specific TraceView layers based on 
+predefined set of configured timers that are to be
+logged on TraceView.</description>
+   <license>OSL</license>
+   <license_uri>http://opensource.org/licenses/OSL-3.0</license_uri>
+   <version>1.0.0</version>
+   <stability>stable</stability>
+   <notes>Version 1.0.0</notes>
+   <authors>
+      <name>
+         <name>Olivier Pepin</name>
+         <name>Florin Mihalache</name>
+      </name>
+      <user>
+         <user>opepin</user>
+         <user>mflorin</user>
+      </user>
+      <email>
+         <email>opepin@gmail.com</email>
+         <email>florin.mihalache@gmail.com</email>
+      </email>
+   </authors>
+   <depends_php_min>5.2.0</depends_php_min>
+   <depends_php_max>6.0.0</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <files>
+            <files>  </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>magecommunity</target>
+         <target>magecommunity</target>
+         <target>mageetc</target>
+         <target>mageetc</target>
+         <target>magedesign</target>
+      </target>
+      <path>
+         <path/>
+         <path>Optaros/TraceView</path>
+         <path>Varien</path>
+         <path>traceview.xml</path>
+         <path>modules/Optaros_TraceView.xml</path>
+         <path>frontend/base/default/layout/traceview.xml</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>dir</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>file</type>
+         <type>file</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

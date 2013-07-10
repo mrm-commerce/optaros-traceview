@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * AppNeta Traceview Module 
+ *
+ * @author   Olivier PEPIN 
+ * @copyright   Copyright (c) 2013 www.optaros.com 
+ */
+-->
+
+<config>
+   <modules>
+       <Optaros_TraceView>
+           <active>true</active>
+           <codePool>community</codePool>
+       </Optaros_TraceView>
+   </modules>
+</config>

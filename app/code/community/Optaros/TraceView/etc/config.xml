@@ -1,0 +1,46 @@
+<config>
+   <modules>
+       <Optaros_TraceView>
+           <version>0.1</version>
+       </Optaros_TraceView>
+   </modules>
+ 
+   <global>
+       <blocks>
+           <traceview>
+               <class>Optaros_TraceView_Block</class>
+           </traceview>
+       </blocks>
+       <helpers>
+           <traceview>
+               <class>Optaros_TraceView_Helper</class>
+           </traceview>
+       </helpers>
+       <models>
+           <traceview>
+               <class>Optraos_TraceView_Model</class>
+           </traceview>
+       </models>
+       <events>
+           <controller_action_predispatch>
+               <observers>
+                   <traceview_controller_action_predispatch>
+                       <type>singleton</type>
+                       <class>Optaros_TraceView_Model_Observer</class>
+                       <method>preDispatch</method>
+                   </traceview_controller_action_predispatch>
+               </observers>
+           </controller_action_predispatch>
+       </events>
+   </global>
+ 
+   <frontend>
+      <layout>
+           <updates>
+               <traceview>
+                   <file>traceview.xml</file>
+               </traceview>
+           </updates>
+       </layout>
+   </frontend>
+</config>

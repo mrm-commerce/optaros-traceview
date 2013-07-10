@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <placeholders>
+        <traceview_head>
+            <block>traceview/head</block>
+            <placeholder>TRACEVIEW_HEAD</placeholder>
+            <container>Optaros_TraceView_Model_Container_Render</container>
+            <cache_lifetime>1</cache_lifetime>
+        </traceview_head>
+        <traceview_footer>
+            <block>traceview/footer</block>
+            <placeholder>TRACEVIEW_FOOTER</placeholder>
+            <container>Optaros_TraceView_Model_Container_Render</container>
+            <cache_lifetime>1</cache_lifetime>
+        </traceview_footer>
+    </placeholders>
+</config>

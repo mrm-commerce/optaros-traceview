@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- Copyright (C) 2010 Optaros, Inc. All rights reserved. -->
+<config>
+	<global>
+		<traceview>
+
+			<!-- enable/disable (1/0) reporting to tracelytics -->
+			<enabled>1</enabled>
+
+			<!-- whether to use RUM or not -->
+			<use_rum>1</use_rum>
+
+			<!-- timer <=> layer association -->
+			<layers>
+
+				<!-- 
+					Timers that end in the given pattern are matched
+					<PATTERN>layer</PATTERN>
+				-->
+
+				<!-- mage_init -->
+				<system_config>mage_init</system_config>
+				<config>mage_init</config>
+				<load_cache>mage_init</load_cache>
+				<stores>mage_init</stores>
+				<init_front_controller>mage_init</init_front_controller>
+				<apply_db_schema_updates>mage_init</apply_db_schema_updates>
+
+				<!-- mage_url_rewrite -->
+				<db_url_rewrite>mage_url_rewrite</db_url_rewrite>
+				<config_url_rewrite>mage_url_rewrite</config_url_rewrite>
+
+				<!-- mage_routers_match -->
+				<routers_match>mage_routers_match</routers_match>
+
+				<!-- mage_predispatch -->
+				<pre-dispatch>mage_predispatch</pre-dispatch>
+
+				<!-- mage_layout_load -->
+				<layout_load>mage_layout_load</layout_load>
+				<layout_generate_xml>mage_layout_load</layout_generate_xml>
+				<layout_generate_blocks>mage_layout_load</layout_generate_blocks>
+
+				<!-- mage_layout_render -->
+				<layout_render>mage_layout_render</layout_render>
+
+				<!-- mage_postdispatch -->
+				<postdispatch>mage_postdispatch</postdispatch>
+
+			</layers>
+
+
+		</traceview>
+	</global>
+</config>

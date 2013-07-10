@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+   <default>
+       <reference name="head">
+           <block type="traceview/head" before="-" name="traceview.head" />
+       </reference>
+       <reference name="before_body_end">
+           <block type="traceview/footer" after="-" name="traceview.footer" />
+       </reference>
+   </default>
+</layout>

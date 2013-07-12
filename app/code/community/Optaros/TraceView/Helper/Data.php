@@ -126,11 +126,12 @@ class Optaros_TraceView_Helper_Data
 
 			$cfg = self::_getConfigNode(self::XML_PATH_CONFIG_ENABLED);
 			if ($cfg === NULL) {
-				/* Config is not loaded at this point, simply return FALSE 
+				/* Config is not loaded at this point, simply return
+				 * based on whether the oboe API is available 
 				 * but DON'T cache the result, leave it NULL
 				 * instead, to recompute it once the config is loaded.
 				 */
-				return FALSE;
+				return (extension_loaded('oboe') && function_exists('oboe_log'));
 			}
 
 			self::$_enabled = 

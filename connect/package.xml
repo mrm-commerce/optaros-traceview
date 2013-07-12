@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package>
-    <name>Optaros_TraceView</name>
+    <name>optaros-traceview</name>
     <version>1.0.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/OSL-3.0">OSL</license>
     <channel>community</channel>
     <extends/>
-    <summary>TraceView profiling through Varien_Profiler</summary>
+    <summary>TraceView performance profiling</summary>
     <description>The module enables profiling with AppNeta TraceView through calls to the Varien_Profiler API.&#xD;
 &#xD;
 Varien_Profiler::start() and stop() methods will&#xD;

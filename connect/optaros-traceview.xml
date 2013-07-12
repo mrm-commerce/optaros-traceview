@@ -1,11 +1,11 @@
 <_>
    <form_key>vB3R76ySMwjIcaxn</form_key>
-   <name>Optaros_TraceView</name>
+   <name>optaros-traceview</name>
    <channel>community</channel>
    <version_ids>
       <version_ids>2</version_ids>
    </version_ids>
-   <summary>TraceView profiling through Varien_Profiler</summary>
+   <summary>TraceView performance profiling</summary>
    <description>The module enables profiling with AppNeta TraceView through calls to the Varien_Profiler API.
 
 Varien_Profiler::start() and stop() methods will

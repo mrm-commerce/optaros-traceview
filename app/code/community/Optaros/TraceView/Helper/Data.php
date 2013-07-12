@@ -99,9 +99,9 @@ class Optaros_TraceView_Helper_Data
 	 */
 	public static function addLayer($timerName, $label) {
 
-		$layer = self::getStaticTimerLayer($timerName);
+		if (self::isEnabled()) {
 
-		if ($layer !== NULL || self::isEnabled()) {
+			$layer = self::getStaticTimerLayer($timerName);
 
 			if (empty($layer))
 				$layer = self::getTimerLayer($timerName);

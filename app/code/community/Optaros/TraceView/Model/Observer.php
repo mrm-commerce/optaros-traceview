@@ -33,8 +33,13 @@ class Optaros_TraceView_Model_Observer {
 
 		/* Partitioning based on whether the 
 		 * customer is logged in or not */
-		if ($session && $session->getCustomer() 
-			&& ($session->getCustomer()->getId() !== NULL)) {
+
+		if (Mage::app()->getStore()->isAdmin())
+		{
+		    oboe_log('info', array('Partition' => 'Admin'));
+
+		}
+		else if ($session && ($session->getCustomerId() !== NULL)) {
 			oboe_log('info', array('Partition' => 'LoggedIn'));
 		} else {
 			oboe_log('info', array('Partition' => 'Anonymous'));

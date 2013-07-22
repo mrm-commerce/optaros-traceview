@@ -14,9 +14,9 @@ predefined set of configured timers that are to be
 logged on TraceView.</description>
    <license>OSL</license>
    <license_uri>http://opensource.org/licenses/OSL-3.0</license_uri>
-   <version>1.0.0</version>
+   <version>1.0.2</version>
    <stability>stable</stability>
-   <notes>Version 1.0.0</notes>
+   <notes>Version 1.0.2</notes>
    <authors>
       <name>
          <name>Olivier Pepin</name>

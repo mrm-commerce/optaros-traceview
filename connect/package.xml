@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>optaros-traceview</name>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/OSL-3.0">OSL</license>
     <channel>community</channel>
@@ -13,10 +13,10 @@ Varien_Profiler::start() and stop() methods will&#xD;
 send info to specific TraceView layers based on &#xD;
 predefined set of configured timers that are to be&#xD;
 logged on TraceView.</description>
-    <notes>Version 1.0.0</notes>
+    <notes>Version 1.0.2</notes>
     <authors><author><name>Olivier Pepin</name><user>opepin</user><email>opepin@gmail.com</email></author><author><name>Florin Mihalache</name><user>mflorin</user><email>florin.mihalache@gmail.com</email></author></authors>
-    <date>2013-07-11</date>
-    <time>15:27:57</time>
+    <date>2013-07-22</date>
+    <time>12:21:00</time>
     <contents><target name="magecommunity"><dir name="Optaros"><dir name="TraceView"><dir name="Block"><file name="Footer.php" hash="69a83ed5c3712daac4acdd19fe775693"/><file name="Head.php" hash="e0f9e47277a2ff60aab7a111d4605d81"/></dir><dir name="Helper"><file name="Data.php" hash="4654b173436bf653d59b7e4d7845499f"/></dir><dir name="Model"><dir name="Container"><file name="Render.php" hash="1eb73a8921e138968c1bb74d186376e7"/></dir><file name="Observer.php" hash="adc785cb8697f498e98c37a80e174666"/></dir><dir name="etc"><file name="cache.xml" hash="b554551e3ed76906c25547aae93bc790"/><file name="config.xml" hash="a4b954756115563f2a91b58d84abddac"/></dir></dir></dir><dir name="Varien"><file name="Profiler.php" hash="6ad63be6f7bc3832cf173d03ea3976ac"/></dir></target><target name="mageetc"><dir name="."><file name="traceview.xml" hash="2beb4bcc172e58de68325b2207ef2ab3"/></dir><dir name="modules"><file name="Optaros_TraceView.xml" hash="4fa79e646dd10ac82884abd00f6ed26c"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="traceview.xml" hash="cd54d6c24fb24a0774adbe0f02870aea"/></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>

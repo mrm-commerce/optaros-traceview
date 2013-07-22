@@ -1,7 +1,7 @@
 <config>
    <modules>
        <Optaros_TraceView>
-           <version>0.1</version>
+           <version>1.0.2</version>
        </Optaros_TraceView>
    </modules>
  

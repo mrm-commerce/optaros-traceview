@@ -22,7 +22,7 @@ class Optaros_TraceView_Model_Observer {
 		$action = $request->getActionName();
 
 		/* log request info */
-		oboe_log('info', 
+		oboe_log(null, 'info', 
 			array(
 				'Controller' => $controller, 
 				'Action' => $action
@@ -36,13 +36,13 @@ class Optaros_TraceView_Model_Observer {
 
 		if (Mage::app()->getStore()->isAdmin())
 		{
-		    oboe_log('info', array('Partition' => 'Admin'));
+		    oboe_log(null, 'info', array('Partition' => 'Admin'));
 
 		}
 		else if ($session && ($session->getCustomerId() !== NULL)) {
-			oboe_log('info', array('Partition' => 'LoggedIn'));
+			oboe_log(null, 'info', array('Partition' => 'LoggedIn'));
 		} else {
-			oboe_log('info', array('Partition' => 'Anonymous'));
+			oboe_log(null, 'info', array('Partition' => 'Anonymous'));
 		}
 	}
 }
